@@ -17,7 +17,7 @@ import NewPost from "./pages/NewPost";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home"); // 페이지 핸들러 상태
-  const [isBannerVisible, setIsBannerVisible] = useState(true); // 배너 가시 상태
+  const [isBannerVisible, setIsBannerVisible] = useState(true); // 배너 가시 높이 상태
 
   // 페이지 핸들러
   const renderPageContent = (selectedPage) => {

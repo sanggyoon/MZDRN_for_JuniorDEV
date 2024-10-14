@@ -6,6 +6,9 @@
 body {
   background-color: #1e1e1e;
 }
+input[radio] {
+  display: none;
+}
 
 :root {
   --MZcolor: #51ff35;
