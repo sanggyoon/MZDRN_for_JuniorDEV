@@ -19,7 +19,7 @@ function App() {
   const renderPageContent = (selectedPage) => {
     switch (selectedPage) {
       case "home":
-        return <Home />;
+        return <></>;
       case "qanda":
         return <QandA />;
       case "feed":
@@ -35,9 +35,10 @@ function App() {
     <main>
       <Header setSelectedPage={setSelectedPage} />
       <Banner />
+      <Home selectedPage={selectedPage} />
       <Nagivator />
       <div className="mainScript">
-        <h1>main script</h1>
+        <h1>main Content</h1>
         {renderPageContent(selectedPage)}
       </div>
 

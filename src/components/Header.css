@@ -5,6 +5,10 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .header > ul {

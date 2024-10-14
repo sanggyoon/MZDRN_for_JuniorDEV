@@ -2,7 +2,7 @@ import "./Board.css";
 
 function Board() {
   return (
-    <div className="board_box">
+    <div className="board_content">
       <h1>Board</h1>
     </div>
   );

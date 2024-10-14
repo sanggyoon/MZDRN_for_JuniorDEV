@@ -8,7 +8,7 @@ function LoginModal({ isActive, closeModal }) {
     >
       <div
         className={`loginModal ${isActive ? "active" : ""}`}
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()} // 이건 뭔지 모르겠음
       >
         <h1>로그인 창</h1>
       </div>
