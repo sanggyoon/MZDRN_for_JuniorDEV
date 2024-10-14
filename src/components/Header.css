@@ -1,0 +1,17 @@
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: royalblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header > ul {
+  list-style: none;
+  display: flex;
+}
+
+.header > ul > li {
+  padding: 0 30px;
+}
