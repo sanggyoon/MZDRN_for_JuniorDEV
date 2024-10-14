@@ -4,12 +4,12 @@ import Button from "./Button";
 import LoginModal from "./LoginModal";
 
 function Header({ setSelectedPage }) {
-  // 선택된 페이지 상태 업데이트
+  // 페이지 핸들러
   const handlePageChange = (event) => {
     setSelectedPage(event.target.value);
   };
 
-  // 버튼 클릭시 로그인 모달 팝업, 배경 클릭시 모달 사라짐
+  // 버튼 클릭시 로그인 모달 팝업
   const [isActive, setIsActive] = useState(false);
   const openModal = () => {
     setIsActive(true);

@@ -1,7 +1,12 @@
 import "./Navigator.css";
 import Button from "./Button";
 
-function Nagivator() {
+function Nagivator({ setSelectedPage }) {
+  // 페이지 핸들러
+  const handlePageChange = (event) => {
+    setSelectedPage(event.target.value);
+  };
+
   return (
     <div className="navigator">
       <h1>Navigator</h1>
@@ -10,9 +15,25 @@ function Nagivator() {
         <li>전체</li>
         <li>HOT</li>
         <li>내 게시글</li>
-        <li>CHAT-BOT</li>
         <li>
-          <Button text={"새 글 작성"} />
+          <input
+            type="radio"
+            id="pageChoice_chatBot"
+            name="pageChoice"
+            value="chatBot"
+            onChange={handlePageChange}
+          />
+          <label htmlFor="pageChoice_chatBot">CHAT-BOT</label>
+        </li>
+        <li>
+          <input
+            type="radio"
+            id="pageChoice_newPost"
+            name="pageChoice"
+            value="newPost"
+            onChange={handlePageChange}
+          />
+          <label htmlFor="pageChoice_newPost">새 글 작성</label>
         </li>
       </ul>
     </div>

@@ -1,5 +1,13 @@
-.banner_box {
+.banner_wrapper {
   width: 100%;
   height: 400px;
   background-color: orange;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.banner_wrapper.hideBanner {
+  height: 0;
+}
+.banner_wrapper.showBanner {
+  height: 400px;
 }

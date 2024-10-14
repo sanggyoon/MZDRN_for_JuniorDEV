@@ -1,9 +1,9 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // components
 import Header from "./components/Header";
-import Nagivator from "./components/Navigator";
+import Navigator from "./components/Navigator";
 import Banner from "./components/Banner";
 import LoginModal from "./components/LoginModal";
 
@@ -12,10 +12,14 @@ import Home from "./pages/Home";
 import QandA from "./pages/Q&A";
 import Feed from "./pages/Feed";
 import Board from "./pages/Board";
+import ChatBot from "./pages/ChatBot";
+import NewPost from "./pages/NewPost";
 
 function App() {
+  const [selectedPage, setSelectedPage] = useState("home"); // 페이지 핸들러 상태
+  const [isBannerVisible, setIsBannerVisible] = useState(true); // 배너 가시 상태
+
   // 페이지 핸들러
-  const [selectedPage, setSelectedPage] = useState("home");
   const renderPageContent = (selectedPage) => {
     switch (selectedPage) {
       case "home":
@@ -26,17 +30,31 @@ function App() {
         return <Feed />;
       case "board":
         return <Board />;
+      case "chatBot":
+        return <ChatBot />;
+      case "newPost":
+        return <NewPost />;
       default:
         return null;
     }
   };
 
+  // 배너 높이 조절
+  useEffect(() => {
+    if (selectedPage === "chatBot" || selectedPage === "newPost") {
+      setIsBannerVisible(false);
+    } else {
+      setIsBannerVisible(true);
+    }
+  }, [selectedPage]);
+
   return (
     <main>
       <Header setSelectedPage={setSelectedPage} />
-      <Banner />
+      <div style={{ height: "100px" }}></div>
+      <Banner isBannerVisible={isBannerVisible} />
       <Home selectedPage={selectedPage} />
-      <Nagivator />
+      <Navigator setSelectedPage={setSelectedPage} />
       <div className="mainScript">
         <h1>main Content</h1>
         {renderPageContent(selectedPage)}

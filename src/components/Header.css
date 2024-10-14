@@ -10,12 +10,10 @@
   left: 0;
   z-index: 2;
 }
-
 .header > ul {
   list-style: none;
   display: flex;
 }
-
 .header > ul > li {
   padding: 0 30px;
 }

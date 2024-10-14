@@ -9,11 +9,9 @@
   transform: translateY(-100%);
   transition: transform 0.5s ease;
 }
-
 .home_content.slideDown {
   transform: translateY(0);
 }
-
 .home_content.slideUp {
   transform: translateY(-100%);
 }
