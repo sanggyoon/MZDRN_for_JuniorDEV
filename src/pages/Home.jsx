@@ -16,6 +16,7 @@ function Home({ isHomeVisible }) {
     <div className={`home_content ${isVisible ? "slideDown" : "slideUp"}`}>
       <div style={{ height: "100px" }}></div>
       <h1>Home</h1>
+      <h2>*임시높이 100vh*</h2>
     </div>
   );
 }

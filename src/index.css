@@ -20,4 +20,6 @@ input[type="checkbox"] {
 
 :root {
   --MZcolor: #51ff35;
+  --HeaderHeight: 100px;
+  --BannerHeight: 400px;
 }

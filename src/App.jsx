@@ -73,7 +73,7 @@ function App() {
         setSelectedPage={setSelectedPage}
         setIsHomeVisible={setIsHomeVisible}
       />
-      <div style={{ height: "100px" }}></div>
+      <div style={{ height: "var(--HeaderHeight)" }}></div>
 
       <Home isHomeVisible={isHomeVisible} />
 

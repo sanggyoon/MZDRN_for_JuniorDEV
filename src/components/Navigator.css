@@ -1,6 +1,6 @@
 .navigator {
   width: 25%;
-  height: 100vh;
+  height: calc(100vh - var(--HeaderHeight));
   background-color: lightgreen;
   float: left;
 }
