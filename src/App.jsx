@@ -19,6 +19,7 @@ import NewPost from "./pages/NewPost";
 import MyPage from "./pages/MyPage";
 
 function App() {
+  const [isHomeVisible, setIsHomeVisible] = useState(true); // 소개 페이지 상태
   const [selectedPage, setSelectedPage] = useState("home"); // 페이지 핸들러 상태
   const [isBannerVisible, setIsBannerVisible] = useState(true); // 배너 높이 상태
   const [isProfileVisible, setIsProfileVisible] = useState(false); // 프로필 이미지 높이 상태
@@ -26,8 +27,6 @@ function App() {
   // 페이지 핸들러
   const renderPageContent = (selectedPage) => {
     switch (selectedPage) {
-      case "home":
-        return <></>;
       case "qanda":
         return <QandA />;
       case "feed":
@@ -70,13 +69,16 @@ function App() {
 
   return (
     <main>
-      <Header setSelectedPage={setSelectedPage} />
+      <Header
+        setSelectedPage={setSelectedPage}
+        setIsHomeVisible={setIsHomeVisible}
+      />
       <div style={{ height: "100px" }}></div>
+
+      <Home isHomeVisible={isHomeVisible} />
 
       <Banner isBannerVisible={isBannerVisible} />
       <ProfileBanner isProfileVisible={isProfileVisible} />
-
-      <Home selectedPage={selectedPage} />
 
       {navigatorHandler(selectedPage)}
 

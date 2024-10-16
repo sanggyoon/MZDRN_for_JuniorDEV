@@ -1,22 +1,36 @@
 import "./Header.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Button from "./Button";
 import LoginModal from "./LoginModal";
 
-function Header({ setSelectedPage }) {
+function Header({ setSelectedPage, setIsHomeVisible }) {
   // 페이지 핸들러
   const handlePageChange = (selectedPage) => {
     setSelectedPage(selectedPage);
+    setIsHomeVisible(false);
   };
 
   // 버튼 클릭시 로그인 모달 팝업
   const [isActive, setIsActive] = useState(false);
+
   const openModal = () => {
     setIsActive(true);
   };
+
   const closeModal = () => {
     setIsActive(false);
+  };
+
+  // 소개 페이지 슬라이드
+  const [isHomeChecked, setIsHomeChecked] = useState(true);
+
+  useEffect(() => {
+    setIsHomeVisible(isHomeChecked);
+  }, [isHomeChecked, setIsHomeVisible]);
+
+  const handleHomeChange = () => {
+    setIsHomeChecked((prev) => !prev);
   };
 
   return (
@@ -26,13 +40,13 @@ function Header({ setSelectedPage }) {
       <ul>
         <li>
           <input
-            type="radio"
-            id="pageChoice_home"
-            name="pageChoice"
-            value="home"
-            onClick={(e) => handlePageChange(event.target.value)}
+            type="checkbox"
+            id="slide_home"
+            name="slideHome"
+            checked={isHomeChecked}
+            onClick={handleHomeChange}
           />
-          <label htmlFor="pageChoice_home">HOME</label>
+          <label htmlFor="slide_home">HOME</label>
         </li>
         <li>
           <input
