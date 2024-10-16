@@ -1,5 +1,4 @@
 import "./Navigator.css";
-import Button from "./Button";
 
 function Nagivator({ setSelectedPage }) {
   // 페이지 핸들러
@@ -14,7 +13,6 @@ function Nagivator({ setSelectedPage }) {
       <ul>
         <li>전체</li>
         <li>HOT</li>
-        <li>내 게시글</li>
         <li>
           <input
             type="radio"

@@ -1,0 +1,13 @@
+.profileBG_wrapper {
+  width: 100%;
+  height: 400px;
+  background-color: khaki;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.profileBG_wrapper.hideProfile {
+  height: 0;
+}
+.profileBG_wrapper.showProfile {
+  height: 400px;
+}
