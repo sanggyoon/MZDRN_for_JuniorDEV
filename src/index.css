@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: var(--nomalGray);
 }
 
 ul {
@@ -20,6 +20,10 @@ input[type="checkbox"] {
 
 :root {
   --MZcolor: #51ff35;
-  --HeaderHeight: 100px;
-  --BannerHeight: 400px;
+  --HeaderHeight: 100px; /*-- tmp --*/
+  --BannerHeight: 400px; /*-- tmp --*/
+
+  --lightGray: #363636;
+  --nomalGray: #1e1e1e;
+  --darkGray: #000000; /*-- 그냥 블랙... --*/
 }

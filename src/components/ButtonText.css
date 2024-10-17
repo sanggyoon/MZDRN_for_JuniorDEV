@@ -1,0 +1,8 @@
+button {
+  background-color: #1e1e1e;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--MZcolor);
+}

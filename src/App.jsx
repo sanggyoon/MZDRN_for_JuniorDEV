@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 
 // components
 import Header from "./components/Header";
+import Home from "./components/Home";
 import LoginModal from "./components/LoginModal";
-import ProfileBanner from "./components/ProfileBanner";
 import Banner from "./components/Banner";
+import ProfileBanner from "./components/ProfileBanner";
 import Navigator from "./components/Navigator";
 import ProfileNavigator from "./components/ProfileNavigator";
 
 //page content
-import Home from "./pages/Home";
 import QandA from "./pages/Q&A";
 import Feed from "./pages/Feed";
 import Board from "./pages/Board";

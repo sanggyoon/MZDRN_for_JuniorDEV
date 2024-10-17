@@ -1,7 +1,8 @@
 import "./Header.css";
 import { useState, useEffect } from "react";
 
-import Button from "./Button";
+import ButtonBG from "./ButtonBG";
+import ButtonText from "./ButtonText";
 import LoginModal from "./LoginModal";
 
 function Header({ setSelectedPage, setIsHomeVisible }) {
@@ -82,13 +83,13 @@ function Header({ setSelectedPage, setIsHomeVisible }) {
 
       <div className="chagnedButtonByLogin">
         {/* isLogined 확인 이후 출력되는 버튼이 달라야함. */}
-        <Button
+        <ButtonText
           text={"시작하기"}
           class={"active_loginModal"}
           onClick={openModal}
         />
 
-        <Button
+        <ButtonBG
           text={"My Page"}
           class={"btn_myPage"}
           onClick={() => handlePageChange("myPage")}
