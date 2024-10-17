@@ -10,12 +10,29 @@ function ProfileNagivator({ setSelectedPage }) {
     <div className="profileNavigator">
       <h1>Navigator_activated Profile</h1>
 
-      {/* 게시글 수정, 삭제 클릭하면 해당 버튼 게시글 요소에서 활성화? */}
       <ul>
         <li>게시글 수정</li>
         <li>게시글 삭제</li>
-        <li>댓글 삭제</li>
-        <li>내 정보 수정</li>
+        <li>
+          <input
+            type="radio"
+            id="pageChoice_commentItems"
+            name="pageChoice"
+            value="commentItems"
+            onChange={handlePageChange}
+          />
+          <label htmlFor="pageChoice_commentItems">댓글 삭제</label>
+        </li>
+        <li>
+          <input
+            type="radio"
+            id="pageChoice_editUserInfo"
+            name="pageChoice"
+            value="editUserInfo"
+            onChange={handlePageChange}
+          />
+          <label htmlFor="pageChoice_editUserInfo">내 정보 수정</label>
+        </li>
       </ul>
     </div>
   );

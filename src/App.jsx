@@ -17,6 +17,8 @@ import Board from "./pages/Board";
 import ChatBot from "./pages/ChatBot";
 import NewPost from "./pages/NewPost";
 import MyPage from "./pages/MyPage";
+import CommentItems from "./pages/CommentItems";
+import EditUserInfo from "./pages/EditUserInfo";
 
 function App() {
   const [isHomeVisible, setIsHomeVisible] = useState(true); // 소개 페이지 상태
@@ -39,6 +41,10 @@ function App() {
         return <NewPost />;
       case "myPage":
         return <MyPage />;
+      case "commentItems":
+        return <CommentItems />;
+      case "editUserInfo":
+        return <EditUserInfo />;
       default:
         return null;
     }
@@ -49,7 +55,11 @@ function App() {
     if (selectedPage === "chatBot" || selectedPage === "newPost") {
       setIsBannerVisible(false);
       setIsProfileVisible(false);
-    } else if (selectedPage === "myPage") {
+    } else if (
+      selectedPage === "myPage" ||
+      selectedPage === "commentItems" ||
+      selectedPage === "editUserInfo"
+    ) {
       setIsBannerVisible(false);
       setIsProfileVisible(true);
     } else {
@@ -60,7 +70,11 @@ function App() {
 
   // navigator 선택
   const navigatorHandler = (selectedPage) => {
-    if (selectedPage === "myPage") {
+    if (
+      selectedPage === "myPage" ||
+      selectedPage === "commentItems" ||
+      selectedPage === "editUserInfo"
+    ) {
       return <ProfileNavigator setSelectedPage={setSelectedPage} />;
     } else {
       return <Navigator setSelectedPage={setSelectedPage} />;
