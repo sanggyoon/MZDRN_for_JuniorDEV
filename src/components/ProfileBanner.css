@@ -1,13 +1,13 @@
-.banner_wrapper {
+.profileBG_wrapper {
   width: 100%;
   height: var(--BannerHeight);
-  background-color: orange;
+  background-color: khaki;
   overflow: hidden;
   transition: 0.5s;
 }
-.banner_wrapper.hideBanner {
+.profileBG_wrapper.hideProfile {
   height: 0;
 }
-.banner_wrapper.showBanner {
+.profileBG_wrapper.showProfile {
   height: 400px;
 }

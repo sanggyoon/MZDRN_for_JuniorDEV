@@ -1,6 +1,6 @@
-.navigator {
+.profileNavigator {
   width: 25%;
   height: calc(100vh - var(--HeaderHeight));
-  background-color: lightgreen;
+  background-color: lightcoral;
   float: left;
 }

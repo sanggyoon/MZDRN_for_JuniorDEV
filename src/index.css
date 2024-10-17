@@ -1,15 +1,29 @@
 * {
   border: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: #1e1e1e;
+  background-color: var(--nomalGray);
 }
-input[radio] {
+
+ul {
+  list-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
   display: none;
 }
 
 :root {
   --MZcolor: #51ff35;
+  --HeaderHeight: 100px; /*-- tmp --*/
+  --BannerHeight: 400px; /*-- tmp --*/
+
+  --lightGray: #363636;
+  --nomalGray: #1e1e1e;
+  --darkGray: #000000; /*-- 그냥 블랙... --*/
 }

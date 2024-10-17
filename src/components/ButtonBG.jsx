@@ -1,6 +1,6 @@
-import "./Button.css";
+import "./ButtonBG.css";
 
-function Button({ className, text, onClick }) {
+function ButtonBG({ className, text, onClick }) {
   return (
     <button className={className} onClick={onClick}>
       {text}
@@ -8,4 +8,4 @@ function Button({ className, text, onClick }) {
   );
 }
 
-export default Button;
+export default ButtonBG;
